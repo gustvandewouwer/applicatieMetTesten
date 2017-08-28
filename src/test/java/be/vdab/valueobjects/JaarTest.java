@@ -1,29 +1,37 @@
 package be.vdab.valueobjects;
 
 import static org.junit.Assert.*;
+//import static org.junit.Assert.assertFalse;
+//import static org.junit.Assert.assertNotEquals;
+//import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
 
 public class JaarTest {
 	@Test
 	public void eenJaarDeelbaarDoor400IsEenSchrikkeljaar() {
-		Jaar jaar = new Jaar(2000);
-		assertEquals(true, jaar.isSchrikkeljaar());
+//		Jaar jaar = new Jaar(2000);
+//		assertEquals(true, jaar.isSchrikkeljaar());
+		assertTrue(new Jaar(2000).isSchrikkeljaar());
 	}
 
 	@Test
 	public void eenJaarDeelbaarDoor100IsGeenSchrikkeljaar() {
-		assertEquals(false, new Jaar(1900).isSchrikkeljaar());
+//		assertEquals(false, new Jaar(1900).isSchrikkeljaar());
+		assertFalse(new Jaar(1900).isSchrikkeljaar());
 	}
 
 	@Test
 	public void eenJaarDeelbaarDoor4IsEenSchrikkeljaar() {
-		assertEquals(true, new Jaar(2012).isSchrikkeljaar());
+//		assertEquals(true, new Jaar(2012).isSchrikkeljaar());
+		assertTrue(new Jaar(2012).isSchrikkeljaar());
 	}
 
 	@Test
 	public void eenJaarNietDeelbaarDoor4IsGeenSchrikkeljaar() {
-		assertEquals(false, new Jaar(2015).isSchrikkeljaar());
+//		assertEquals(false, new Jaar(2015).isSchrikkeljaar());
+		assertFalse(new Jaar(2015).isSchrikkeljaar());
 	}
 
 	@Test
