@@ -13,6 +13,7 @@ public class JaarTest {
 	public void eenJaarDeelbaarDoor400IsEenSchrikkeljaar() {
 //		Jaar jaar = new Jaar(2000);
 //		assertEquals(true, jaar.isSchrikkeljaar());
+		
 		assertTrue(new Jaar(2000).isSchrikkeljaar());
 	}
 
