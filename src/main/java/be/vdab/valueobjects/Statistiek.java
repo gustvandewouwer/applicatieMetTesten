@@ -1,6 +1,7 @@
 package be.vdab.valueobjects;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Statistiek {
 	public static BigDecimal getGemiddelde(BigDecimal[] getallen) {
@@ -8,13 +9,13 @@ public class Statistiek {
 			throw new IllegalArgumentException("Lege array");
 		}
 
-		BigDecimal gemiddelde = BigDecimal.ZERO;
-		for (BigDecimal getal : getallen) {
-			gemiddelde = gemiddelde.add(getal);
-		}
-		return gemiddelde.divide(BigDecimal.valueOf(getallen.length));
+//		BigDecimal gemiddelde = BigDecimal.ZERO;
+//		for (BigDecimal getal : getallen) {
+//			gemiddelde = gemiddelde.add(getal);
+//		}
+//		return gemiddelde.divide(BigDecimal.valueOf(getallen.length));
 		
-//		return Arrays.stream(getallen).reduce(BigDecimal.ZERO, (vorigTotaal, getal) -> vorigTotaal.add(getal))
-//				.divide(BigDecimal.valueOf(getallen.length));
+		return Arrays.stream(getallen).reduce(BigDecimal.ZERO, (vorigTotaal, getal) -> vorigTotaal.add(getal))
+				.divide(BigDecimal.valueOf(getallen.length));
 	}
 }
